@@ -1,0 +1,67 @@
+body {
+	background-color: #e0e0e0;
+	border-bottom: #c80000 solid 47px;
+}
+.message-input, .message-input .inline-label, .menu-bar {margin-bottom: 0;}
+#sidebar, .messages {border-right: 1px solid #eee;}
+.message-side-bar {border-left: 1px solid #eee;}
+.avatar-section {border-top: 1px solid #eee;}
+
+/* Author: Anthony Rawlins <s3392244@student.rmit.edu.au> */
+.speechbubble,
+.vcard {
+    padding: 1em;
+    border: gray 3px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 7px;
+    margin-bottom: 14px;
+    margin-top: 7px;
+    position: relative;
+    background-color: #fff;
+}
+.speechindicator {
+    width: 15px;
+    height: 30px;
+    background-position: left top;
+    position: absolute;
+    float: none;
+    bottom: 30px;
+    /*background-color: aqua; /* For debugging only! */
+    background-image: url('../img/indicators.png');
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+.them .speechindicator {
+    left: -15px;
+}
+.you .speechindicator {
+    right: -15px;
+    background-position-x: -15px;
+}
+
+.vcard {
+	margin-top: 14px;
+	margin-bottom: 7px;
+}
+
+.thick-border {
+	padding:4px;
+	border: #c80000 solid 4px;
+}
+
+.export {
+	right: 4px;
+	top: 4px;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+}
+
+.dark {
+	background-color: rgba(59, 59, 59, 0.91);
+}
+
+.js-data-integration-src {
+	display: none;
+}

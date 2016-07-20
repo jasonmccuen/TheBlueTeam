@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title>Chat with enoRMITy</title>
+        
+        <link href="assets/css/foundation.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+	
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/routes.js"></script>
+        <script src="assets/js/angular.js"></script>
+        
+        <script type="text/javascript">
+	        
+	        /*
+		        emailHash returns an md5 encoded string of the users registered email address.
+		        we use this to call Gravatar's API and collect their supplied avatar image.
+		        
+		        As JS does not have a built-in md5 function we're using an implementation we found.
+		        
+		        TODO - Explore whether Foundation or NodeJS supports md5
+	        */
+	        function emailHash(email) {
+		        /* Must be lowercase */
+		        /* Must have no leading or trailing whitespace */
+		        return (email!==null) ? md5(email.trim()) : null;
+	        }
+	        
+	        function md5(s) {
+		        /* TODO - find an md5 implementation in JS */
+		        return s;
+	        }
+	        
+        </script>
+    </head>
+    
+	<body>
+		<div class="js-data-integration-src">
+	    {
+	        "Authored"   : {
+	        				"Contributors" : [
+	        					{"Anthony Rawlins":"s3392244@student.rmit.edu.au"}
+						    ]
+						   },
+	        "Date"        : "20/07/2016",
+	        "School"      : "CSIT",
+	        "University"  : "RMIT",
+	        "Provider"    : "OUA"
+	        "Assignment"  : "3",
+	        "Subject"     : "CPT111",
+	        "SubjectName" : "Building IT Systems",
+	        "Purpose"     : "Prototype for Mobile Application",
+	        "Using"       : [
+	        				 "#Foundation6",
+	                         "#NodeJS",
+	                         "#IBMWatson",
+	                         "#NodeRED"
+	                        ]
+	    }
+	    </div>
+		<div class="grid-frame">
+	        <div class="grid-block dark">
+		        <div class="grid-content">
+			        <h4>Sharing options</h4>
+			        <!-- Export vCard -->
+			        <!-- Export other -->
+			        <hr/>
+		        </div>
+	        </div>
+            <div class="grid-block small-12 medium-8 large-8 vertical">
+                <div class="grid-content">
+                    
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+                    <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+                    <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue.</p></div>
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+                    <h4><img width="64" height="64" src="http://www.gravatar.com/avatar/{{emailHash}}"> You</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+                    <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+                    <h4><img width="64" height="64" src="http://www.gravatar.com/avatar/{{emailHash}}"> You</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+                    <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+                    <h4><img width="64" height="64" src="http://www.gravatar.com/avatar/{{emailHash}}"> You</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+                    <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+                    <h4><img width="64" height="64" src="http://www.gravatar.com/avatar/{{emailHash}}"> You</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+                    
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+                    <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    <div class="vcard">
+                        <div class="button.secondary export"><a href="#"><img src="assets/img/iconic/share-boxed.svg" width="22" height="22"></a></div>
+                        <h4><img src="http://placehold.it/64x64"> <span>{{title}} {{firstName}} {{surname}}</span></h4>
+                        
+                        <div class="details">
+                            <h5><span>{{position}} @ {{school}}, {{collegeDept}}</span></h5>
+                            <h5><span>{{phone}}</span></h5>
+							<h5><span><a href="mailto: {{firstName}} {{surname}} <{{email}}>">{{email}}</a></span></h5>
+                        </div>
+                    </div>
+                    </div>
+                    <div><img src="assets/img/loading.gif"></div>
+                </div>
+                <div class="message-input grid-content collapse shrink thick-border">
+                    <span class="inline-label"><input type="text" placeholder="Message"><a href="#" class="button">Send</a></span>
+                </div>
+            </div>
+            <div class="grid-block"></div>
+        </div>
+    </body>
+</html>
+<!-- ui-view  -->
