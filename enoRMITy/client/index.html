@@ -1,137 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en" ng-app="application">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>enoRMITy App</title>
-        <link href="assets/css/foundation.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/app.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/routes.js"></script>
-        <script src="assets/js/angular.js"></script>
-        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdn.auth0.com/js/lock-9.0.min.js"></script>
-        <script src="https://use.typekit.net/elk6rcx.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
-        <script src="auth0-variables.js"> </script>
-        <script src="app.js"> </script>
-    </head>
-    <body class="tk-museo">
-        <div class="grid-frame auth0-box before">
-            <div class="login-page grid-block small-6 medium-6 large-6 vertical">
-                <div class="login-box center">
-                    <img src="assets/img/logoword256x256.png" />
-                    <h4>Ask anything.</h4>
-                    <p><a ng-click="login()" class="btn btn-primary btn-lg btn-login btn-block">Sign In</a></p>
-                    <p class="small">Authentication by Auth0</p>
-                </div>
-            </div>             
-            <div class="grid-frame logged-in-box auth0-box logged-in" style="display: none;">
-                <div class="grid-block">
-</div>
-                <div class="grid-block small-12 medium-8 large-8 vertical">
-                    <div class="grid-content">
-                        <div class="speechbubble them">
-                            <div class="speechindicator"></div>
-                            <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
-                            <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue.</p>
-                        </div>
-                        <div class="speechbubble you">
-                            <div class="speechindicator"></div>
-                            <h4><img class="avatar" height="64" width="64" /> You</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble them">
-                            <div class="speechindicator"></div>
-                            <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble you">
-                            <div class="speechindicator"></div>
-                            <h4><img class="avatar" height="64" width="64" /> You</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble them">
-                            <div class="speechindicator"></div>
-                            <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble you">
-                            <div class="speechindicator"></div>
-                            <h4><img class="avatar" height="64" width="64" /> You</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble them">
-                            <div class="speechindicator"></div>
-                            <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble you">
-                            <div class="speechindicator"></div>
-                            <h4><img class="avatar" height="64" width="64" /> You</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                        </div>
-                        <div class="speechbubble them">
-                            <div class="speechindicator"></div>
-                            <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
-                            <div class="vcard">
-                                <div class="button.secondary export">
-                                    <a href="#">
-                                        <img src="assets/img/iconic/share-boxed.svg" width="22" height="22">
-                                    </a>
-                                </div>
-                                <h4><img src="http://placehold.it/64x64" width="64" height="64"> <span>{{title}} {{firstName}} {{surname}}</span></h4>
-                                <div class="details">
-                                    <h5><span>{{position}} @ {{school}}, {{collegeDept}}</span></h5>
-                                    <h5><span>{{phone}}</span></h5>
-                                    <h5><span><a href="mailto: {{firstName}} {{surname}} <{{email}}>">{{email}}</a></span></h5>
-                                </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>enoRMITy App</title>
+    <link href="assets/css/foundation.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+    
+    
+    <script src="assets/js/routes.js" type="text/javascript">
+</script>
+    <script src="assets/js/angular.js" type="text/javascript">
+</script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript">
+</script>
+    <script src="https://cdn.auth0.com/js/lock-9.0.min.js" type="text/javascript">
+</script>
+    <script src="https://use.typekit.net/elk6rcx.js" type="text/javascript">
+</script>
+    <script type="text/javascript">
+try{Typekit.load({ async: true });}catch(e){}
+    </script>
+    <script src="auth0-variables.js" type="text/javascript">
+</script>
+
+    <script src="assets/js/app.js" type="text/javascript">
+</script>
+    
+</head>
+
+<body class="tk-museo">
+    <div class="grid-frame auth0-box before">
+        <div class="login-page grid-block small-9 medium-7 large-3 vertical">
+            <div class="login-box center">
+                <img src="assets/img/logoword256x256.png">
+
+                <h4>Ask anything.</h4>
+
+                <p><a ng-click="login()" class="btn btn-primary btn-lg btn-login btn-block">Sign In</a></p>
+
+                <p class="small">Authentication by Auth0</p>
+            </div>
+        </div>
+
+        <div class="grid-frame logged-in-box auth0-box logged-in" style="display: none;">
+            <div class="grid-block"></div>
+
+            <div class="grid-block small-12 medium-9 large-5 vertical">
+                <div class="grid-content conversation">
+	                
+	                
+	                
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+
+                        <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+
+                        <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue.</p>
+                    </div>
+
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+
+                        <h4><img class="avatar" height="64" width="64"> You</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+
+                        <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+
+                        <h4><img class="avatar" height="64" width="64"> You</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+
+                        <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+
+                        <h4><img class="avatar" height="64" width="64"> You</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+
+                        <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble you">
+                        <div class="speechindicator"></div>
+
+                        <h4><img class="avatar" height="64" width="64"> You</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+                    </div>
+
+                    <div class="speechbubble them">
+                        <div class="speechindicator"></div>
+
+                        <h4><img src="assets/img/logo64x64.png"> enoRMITy</h4>
+
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat.</p>
+
+                        <div class="vcard">
+                            <div class="button.secondary export">
+                                <a href="#"><img src="assets/img/iconic/share-boxed.svg" width="22" height="22"></a>
+                            </div>
+
+                            <h4><img src="http://placehold.it/64x64" width="64" height="64"> <span>{{title}} {{firstName}} {{surname}}</span></h4>
+
+                            <div class="details">
+                                <h5><span>{{position}} @ {{school}}, {{collegeDept}}</span></h5>
+
+                                <h5><span>{{phone}}</span></h5>
+
+                                <h5><span><a href="mailto: {{firstName}} {{surname}} &lt;{{email}}&gt;">{{email}}</a></span></h5>
                             </div>
                         </div>
-                        <div>
-                            <img src="assets/img/loading.gif">
-                        </div>
                     </div>
-                    <div class="message-input grid-content collapse shrink thick-border">
-                        <span class="inline-label"><input type="text" placeholder="Message"><a href="#" class="button">Send</a></span>
-                    </div>
+
+                    <div><img src="assets/img/loading.gif"></div>
                 </div>
-                <div class="grid-block">
-                    <div class="logged-in-box auth0-box logged-in" style="display: none;">
-                        <img class="avatar" height="64" width="64" />
-                        <h5>Welcome <span class="nickname"></span></h5>
-                        <!--                 <button class="btn btn-lg btn-primary" ng-click="logout()">Logout</button> -->
-                        <button class="btn btn-lg btn-primary btn-api">Call API</button>
-                        <a href="https://s3392244.auth0.com/v2/logout?returnTo=http://localhost:8079/" class="btn btn-logout btn-primary btn-lg btn-block">Log out</a>
-                    </div>
+
+                <div class="message-input grid-content collapse shrink thick-border">
+                    <span class="inline-label"><input type="text" placeholder="Message"><a href="#" class="button">Send</a></span>
+                </div>
+            </div>
+
+            <div class="grid-block">
+                <div class="logged-in-box auth0-box logged-in" style="display: none;">
+                    <img class="avatar" height="64" width="64">
+
+                    <h5>Welcome</h5><a href="https://s3392244.auth0.com/v2/logout?returnTo=http://localhost:8079/" class="btn btn-logout btn-primary btn-lg btn-block">Log out</a>
                 </div>
             </div>
         </div>
-        <div class="js-data-integration-src">
-            {
-            "Authored"   : {
-            "Contributors" : [
-            {"Anthony Rawlins":"s3392244@student.rmit.edu.au"}
-            ]
-            },
-            "Date"        : "20/07/2016",
-            "School"      : "CSIT",
-            "University"  : "RMIT",
-            "Provider"    : "OUA"
-            "Assignment"  : "3",
-            "Subject"     : "CPT111",
-            "SubjectName" : "Building IT Systems",
-            "Purpose"     : "Prototype for Mobile Application",
-            "Using"       : [
-            "#Foundation6",
-            "#NodeJS",
-            "#IBMWatson",
-            "#NodeRED"
-            ]
-            }
-</div>
-    </body>
+    </div>
+
+    <div class="js-data-integration-src">
+        { "Authored" : { "Contributors" : [ {"Anthony Rawlins":"s3392244@student.rmit.edu.au"} ] }, "Date" : "20/07/2016", "School" : "CSIT", "University" : "RMIT", "Provider" : "OUA" "Assignment" : "3", "Subject" : "CPT111", "SubjectName" : "Building IT Systems", "Purpose" : "Prototype for Mobile Application", "Using" : [ "#Foundation6", "#NodeJS", "#IBMWatson", "#NodeRED" ] }
+    </div><!-- ui-view  -->
+</body>
 </html>
-<!-- ui-view  -->
