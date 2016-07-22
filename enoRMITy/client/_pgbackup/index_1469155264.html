@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>enoRMITy App</title>
+        <title>Chat with enoRMITy</title>
         <link href="assets/css/foundation.css" rel="stylesheet" type="text/css">
         <link href="assets/css/app.css" rel="stylesheet" type="text/css">
         <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
@@ -18,14 +18,15 @@
         <script src="app.js"> </script>
     </head>
     <body>
-        <div class="grid-frame auth0-box before">
+        <div class=" grid-frame auth0-box before">
             <div class="login-page grid-block small-6 medium-6 large-6 vertical">
                 <div class="login-box center">
                     <img src="assets/img/logoword256x256.png" />
-                    <h4>Ask anything.</h4>
-                    <p><a ng-click="login()" class="btn btn-primary btn-lg btn-login btn-block">Sign In</a></p>
-                    <p class="small">Authentication by Auth0</p>
+                    <h3>Authenticate by Auth0</h3>
+                    <p>Ask enoRMITy anything about RMIT staff</p>
+                    <a ng-click="login()" class="btn btn-primary btn-lg btn-login btn-block">Sign In</a>
                 </div>
+                <div class="login-page grid-block small-2 medium-2 large-2 vertical"></div>
             </div>             
             <div class="grid-frame logged-in-box auth0-box logged-in" style="display: none;">
                 <div class="grid-block">
