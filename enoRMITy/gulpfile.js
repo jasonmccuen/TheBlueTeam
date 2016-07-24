@@ -149,7 +149,7 @@ gulp.task('server', ['build'], function() {
   gulp.src('./build')
     .pipe($.webserver({
       port: 8079,
-      host: 'localhost',
+      host: 'teamblue.xyz',
       fallback: 'index.html',
       livereload: true,
       open: true

@@ -36,6 +36,8 @@ $(document).ready(function() {
       $('.nickname').text(profile.name);
       $('.avatar').attr('src', profile.picture);
       
+      $('#speech').focus();
+      
       userProfile = profile;
 
       });
