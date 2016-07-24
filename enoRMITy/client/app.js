@@ -60,7 +60,7 @@ $(document).ready(function() {
     $('.btn-api').click(function(e) {
       // Just call your API here. The header will be sent
       $.ajax({
-        url: 'http://localhost:3001/secured/ping',
+        url: 'http://teamblue.xyz:3001/secured/ping',
         method: 'GET'
       }).then(function(data, textStatus, jqXHR) {
         alert("The request to the secured enpoint was successfull");
@@ -78,7 +78,7 @@ $(document).ready(function() {
     var socket = new WebSocket('ws://teamblue.xyz:1880/ws/chat');
 	socket.onmessage = function(evt) {
 		
-		$.ajax('http://localhost:8079/partials/them_loading.html').
+		$.ajax('http://teamblue.xyz:8079/partials/them_loading.html').
     	done(function(content) {
 	    	msg = evt.data;
 	    	$('#conversation').append(content);
@@ -94,7 +94,7 @@ $(document).ready(function() {
     var talk = function(e) {
 	    var msg;
 	    
-	    $.ajax('http://localhost:8079/partials/you_loading.html').
+	    $.ajax('http://teamblue.xyz:8079/partials/you_loading.html').
     	done(function(content) {
 	    	msg = $('#speech').val();
 	    	$('#conversation').append(content);
