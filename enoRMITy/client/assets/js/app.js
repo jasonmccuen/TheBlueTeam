@@ -61,6 +61,7 @@ $(document).ready(function() {
     });
 
 	$('.btn-logout').click(function(e) {
-      localStorage.setItem('id_token', "false");	
+      localStorage.setItem('id_token', "false");
+      localStorage.removeItem('id_token');	
     });
 });
