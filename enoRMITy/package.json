@@ -1,6 +1,6 @@
 {
-  "name": "foundation-apps-template",
-  "version": "1.2.0",
+  "name": "enormity",
+  "version": "0.2.0",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production"

@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     $('.btn-login').click(function(e) {
       e.preventDefault();
-      lock.show({ authParams: { scope: 'openid' } });	
+      lock.show({ authParams: { scope: 'openid' } });
     });
     var hash = lock.parseHash(window.location.hash);
 
@@ -35,9 +35,13 @@ $(document).ready(function() {
       $('.nickname').text(profile.nickname);
       $('.nickname').text(profile.name);
       $('.avatar').attr('src', profile.picture);
-            	
+      
+      userProfile = profile;
+
       });
     }
+
+	$(document).foundation();
 
     $.ajaxSetup({
       'beforeSend': function(xhr) {
@@ -48,6 +52,9 @@ $(document).ready(function() {
       }
     });
 
+	/**
+	This is an example function to demonstrate how we'll integrate our own API
+	*/
     $('.btn-api').click(function(e) {
       // Just call your API here. The header will be sent
       $.ajax({
@@ -61,6 +68,49 @@ $(document).ready(function() {
     });
 
 	$('.btn-logout').click(function(e) {
-      localStorage.removeItem('id_token');	
+      localStorage.removeItem('id_token');
     });
+    
+    
+    
+    var socket = new WebSocket('ws://teamblue.xyz:1880/ws/chat');
+	socket.onmessage = function(evt) {
+		
+		$.ajax('http://localhost:8079/partials/them_loading.html').
+    	done(function(content) {
+	    	msg = evt.data;
+	    	$('#conversation').append(content);
+	    	$('.lastMessage').append('<p>'+msg+'</p>');
+	    	$('.lastMessage').removeClass('lastMessage');
+	    	
+	    	$('#conversation').animate({ scrollTop: $('#conversation').prop("scrollHeight")}, 1000);
+	 	});
+	};
+
+    /** Example usage of Foundations Modal Reveal */
+    
+    var talk = function(e) {
+	    var msg;
+	    
+	    $.ajax('http://localhost:8079/partials/you_loading.html').
+    	done(function(content) {
+	    	msg = $('#speech').val();
+	    	$('#conversation').append(content);
+	    	$('.lastMessage').append('<p>'+msg+'</p>');
+	    	$('.lastMessage').removeClass('lastMessage');
+	    	$('#speech').val('');
+	    	
+			$('.avatar').attr('src', userProfile.picture);
+	    	
+	    	socket.send(msg);
+	    	
+	    	$('#conversation').animate({ scrollTop: $('#conversation').prop("scrollHeight")}, 1000);
+	 	});
+	 	
+	};
+    
+    $('#sendMessage').click(talk);
+    $('#speech').change(talk);
+    
+	
 });
